@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "eye-tracker",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "eye-tracker"
+	}
+}
