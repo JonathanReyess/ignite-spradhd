@@ -1,19 +1,28 @@
-# ignite
+# SpraDHD
 
-This is my March 2023 Duke Ignite (dukeignite.com) Hackathon project SpraDHD.
-
+This project, SpraDHD, was developed during the March 2023 Duke Ignite Hackathon hosted by [Duke Ignite](https://dukeignite.com/).
 
 ## Synopsis
 
-Have you ever struggled at paying attention to your work tasks on your laptop? With your smartphone right beside you and applications such as Tiktok and Instagram, remaining focused could be difficult.  
+Do you find it challenging to stay focused on your work tasks while distractions like social media apps are just a click away on your smartphone? SpraDHD is here to help you maintain concentration by using gaze detection technology to detect when your visual attention shifts from your computer to external stimuli.
 
 ## Libraries
 
-This software utilizes the open source Javascript library 'WebGazer' to track the human iris and calibrate our model in real time to detect when one's visual attention has shifted from their computer to external stimuli. 
+SpraDHD utilizes the open-source JavaScript library [WebGazer](https://github.com/brownhci/WebGazer) for real-time iris tracking and model calibration. WebGazer helps determine if the user's vision is within the bounding box of the computer screen.
 
-For more information, visit the WebGazer library GitHub documentation - https://github.com/brownhci/WebGazer
+## Functionality
 
-## Functionality 
+The core functionality involves using WebGazer for gaze detection. If the user's gaze moves outside the specified bounding box (representing the computer screen), SpraDHD sends a **GET** request to the IP address of an ESP32 Arduino. Upon receiving the HTTP request, the Arduino triggers a motor connected to a spray bottle.
 
-We utilize WebGazer for gaze detection to deterimine if one's vision is within the bounding box of our window, in this case, your computer screen. If your gaze is within the outer edges of the bounding box, we will send a **GET** request to the IP address of an ESP32 arduino. Once the HTTP request is received, it will trigger a motor connected to a spray bottle. 
 
+## Usage
+
+1. Make sure your webcam is enabled.
+2. Run the application in a controlled environment.
+3. Keep your gaze within the computer screen area to avoid distractions.
+4. Experience the spray mechanism if your focus drifts away.
+
+## Acknowledgments
+
+- [Duke Ignite](https://dukeignite.com/) for hosting the hackathon.
+- [WebGazer](https://github.com/brownhci/WebGazer) for the gaze detection library.
